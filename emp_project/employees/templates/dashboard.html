@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container py-4">
+    <h2 class="mb-4 text-center">Employee Management Dashboard</h2>
+
+    <div class="row g-4">
+        <!-- Manage Employees -->
+        <div class="col-md-4">
+            <a href="{% url 'employee_list' %}" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-primary h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Manage Employees</h5>
+                        <p class="card-text display-6">34</p>
+                        <p class="card-text">View all employees</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Manage Departments -->
+        <div class="col-md-4">
+            <a href="{% url 'department_list' %}" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-success h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Manage Departments</h5>
+                        <p class="card-text display-6">4</p>
+                        <p class="card-text">View all departments</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Attendance Today -->
+        <div class="col-md-4">
+            <a href="" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-warning h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Today's Attendance</h5>
+                        <p class="card-text display-6">30</p>
+                        <p class="card-text">View today's attendance</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Leaves Today -->
+        <div class="col-md-4">
+            <a href="" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-danger h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Employees on Leave</h5>
+                        <p class="card-text display-6">4</p>
+                        <p class="card-text">View leave requests</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- New Joinees -->
+        <div class="col-md-4">
+            <a href="" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-info h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">New Joinees</h5>
+                        <p class="card-text display-6">5</p>
+                        <p class="card-text">See this month's new joinees</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Resigned Employees -->
+        <div class="col-md-4">
+            <a href="" class="dashboard-card link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0">
+                <div class="card text-white bg-secondary h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Resigned Employees</h5>
+                        <p class="card-text display-6">23</p>
+                        <p class="card-text">View all resigned employees</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends 'main.html'  %}
+{% block content %}
+<div class="container">
+    <div class="form-container">
+        <h4 class="text-center mb-3">Employee Profile</h4>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Employee -->
+            <div class="mb-2">
+                <label for="employee" class="form-label small">Employee</label>
+                <input type="text" class="form-control form-control-sm" id="employee" name="employee" value="{{ employee.ename }}" disabled>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="mb-2">
+                <label for="profile_picture" class="form-label small">Profile Picture</label>
+                <input type="file" class="form-control form-control-sm" id="profile_picture" name="profile_picture" accept="image/*" required>
+            </div>
+
+            <!-- Resume -->
+            <div class="mb-2">
+                <label for="resume" class="form-label small">Resume (PDF/DOC)</label>
+                <input type="file" class="form-control form-control-sm" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-2">
+                <label for="phone_number" class="form-label small">Phone</label>
+                <input type="text" class="form-control form-control-sm" id="phone_number" name="phone_noa" placeholder="+91-9876543210" required>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="mb-2">
+                <label for="linkedin" class="form-label small">LinkedIn URL</label>
+                <input type="url" class="form-control form-control-sm" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/example">
+            </div>
+
+            <!-- Bio -->
+            <div class="mb-3">
+                <label for="bio" class="form-label small">Bio</label>
+                <textarea class="form-control form-control-sm" id="bio" name="bio" rows="3" placeholder="Short description..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-sm btn-primary w-100">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

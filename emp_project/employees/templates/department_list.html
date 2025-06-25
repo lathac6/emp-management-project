@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Department</h2>
+</div>
+<table class="table table-striped table-hover">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">dname</th>
+      <th scope="col">dloc</th>
+    </tr>
+    </thead>
+  <tbody>
+    {% for department in departments %}
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ department.dname }}</td>
+        <td>{{ department.dloc }}</td>
+  </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Create Department</h2>
+    <form method="post">
+       {% csrf_token %}
+    <div class="mb-3">
+        <label for="dname" class="form-label">Department name</label>
+        <input type="text" class="form-control" name="dname" required>
+    </div>
+    <div class="mb-3">
+        <label for="dloc" class="form-label">Department loc</label>
+        <input type="text" class="form-control" name="dloc" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content  %}
